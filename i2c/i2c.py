@@ -102,7 +102,7 @@ def decoded_measurement(data):
 
 def Calc_CRC(data):
   crc = INITIAL_MODBUS
-  for ch in data[:-2]:
+  for ch in data:
     crc = calcByte( ch, crc)
   crc = zfill(bin(crc)[2:],16)  
   put_crc = ''        
@@ -111,7 +111,7 @@ def Calc_CRC(data):
   return(rev(put_crc))
 
 def Check_CRC(data):
-  crc=Calc_CRC(data)
+  crc=Calc_CRC(data[:-2])
   temp = bytes()
   for i in crc:
     temp += bytes([ord(i)])
@@ -145,4 +145,3 @@ def main():
       measurent= decoded_measurement(data[3:-2])
       print(measurent)
 main()
-

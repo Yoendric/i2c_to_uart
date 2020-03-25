@@ -56,7 +56,6 @@ void UART_read(void)
     while(Serial1.available())          // reading data into char array
     {
      PzemRead[Pointer]=Serial1.read();
-     //Serial.println(Pointer);
      Pointer++;
     } 
   }
