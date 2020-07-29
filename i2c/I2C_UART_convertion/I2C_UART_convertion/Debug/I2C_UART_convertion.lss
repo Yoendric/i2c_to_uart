@@ -1,0 +1,558 @@
+
+I2C_UART_convertion.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800100  0000037c  00000410  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000037c  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000025  00800102  00800102  00000412  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000412  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000444  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000070  00000000  00000000  00000484  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000caa  00000000  00000000  000004f4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000a55  00000000  00000000  0000119e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000548  00000000  00000000  00001bf3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000011c  00000000  00000000  0000213c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000591  00000000  00000000  00002258  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000002cc  00000000  00000000  000027e9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000060  00000000  00000000  00002ab5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 5a 00 	jmp	0xb4	; 0xb4 <__ctors_end>
+   4:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+   8:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+   c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  10:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  14:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  18:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  1c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  20:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  24:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  28:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  2c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  30:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  34:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  38:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  3c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  40:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  44:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  48:	0c 94 f6 00 	jmp	0x1ec	; 0x1ec <__vector_18>
+  4c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  50:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  54:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  58:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  5c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  60:	0c 94 21 01 	jmp	0x242	; 0x242 <__vector_24>
+  64:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  68:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  6c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  70:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  74:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  78:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  7c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  80:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  84:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  88:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  8c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  90:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  94:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  98:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  9c:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  a0:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  a4:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  a8:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  ac:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+  b0:	0c 94 77 00 	jmp	0xee	; 0xee <__bad_interrupt>
+
+000000b4 <__ctors_end>:
+  b4:	11 24       	eor	r1, r1
+  b6:	1f be       	out	0x3f, r1	; 63
+  b8:	cf ef       	ldi	r28, 0xFF	; 255
+  ba:	d8 e0       	ldi	r29, 0x08	; 8
+  bc:	de bf       	out	0x3e, r29	; 62
+  be:	cd bf       	out	0x3d, r28	; 61
+
+000000c0 <__do_copy_data>:
+  c0:	11 e0       	ldi	r17, 0x01	; 1
+  c2:	a0 e0       	ldi	r26, 0x00	; 0
+  c4:	b1 e0       	ldi	r27, 0x01	; 1
+  c6:	ec e7       	ldi	r30, 0x7C	; 124
+  c8:	f3 e0       	ldi	r31, 0x03	; 3
+  ca:	02 c0       	rjmp	.+4      	; 0xd0 <__do_copy_data+0x10>
+  cc:	05 90       	lpm	r0, Z+
+  ce:	0d 92       	st	X+, r0
+  d0:	a2 30       	cpi	r26, 0x02	; 2
+  d2:	b1 07       	cpc	r27, r17
+  d4:	d9 f7       	brne	.-10     	; 0xcc <__do_copy_data+0xc>
+
+000000d6 <__do_clear_bss>:
+  d6:	21 e0       	ldi	r18, 0x01	; 1
+  d8:	a2 e0       	ldi	r26, 0x02	; 2
+  da:	b1 e0       	ldi	r27, 0x01	; 1
+  dc:	01 c0       	rjmp	.+2      	; 0xe0 <.do_clear_bss_start>
+
+000000de <.do_clear_bss_loop>:
+  de:	1d 92       	st	X+, r1
+
+000000e0 <.do_clear_bss_start>:
+  e0:	a7 32       	cpi	r26, 0x27	; 39
+  e2:	b2 07       	cpc	r27, r18
+  e4:	e1 f7       	brne	.-8      	; 0xde <.do_clear_bss_loop>
+  e6:	0e 94 d4 00 	call	0x1a8	; 0x1a8 <main>
+  ea:	0c 94 bc 01 	jmp	0x378	; 0x378 <_exit>
+
+000000ee <__bad_interrupt>:
+  ee:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000f2 <TWI_Init>:
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  f2:	88 0f       	add	r24, r24
+  f4:	81 60       	ori	r24, 0x01	; 1
+  f6:	80 93 ba 00 	sts	0x00BA, r24	; 0x8000ba <__TEXT_REGION_LENGTH__+0x7e00ba>
+  fa:	ec eb       	ldi	r30, 0xBC	; 188
+  fc:	f0 e0       	ldi	r31, 0x00	; 0
+  fe:	84 e0       	ldi	r24, 0x04	; 4
+ 100:	80 83       	st	Z, r24
+ 102:	8f e3       	ldi	r24, 0x3F	; 63
+ 104:	9c e9       	ldi	r25, 0x9C	; 156
+ 106:	01 97       	sbiw	r24, 0x01	; 1
+ 108:	f1 f7       	brne	.-4      	; 0x106 <TWI_Init+0x14>
+ 10a:	00 c0       	rjmp	.+0      	; 0x10c <TWI_Init+0x1a>
+ 10c:	00 00       	nop
+ 10e:	78 94       	sei
+ 110:	85 ec       	ldi	r24, 0xC5	; 197
+ 112:	80 83       	st	Z, r24
+ 114:	08 95       	ret
+
+00000116 <USART_Init>:
+ 116:	10 92 c0 00 	sts	0x00C0, r1	; 0x8000c0 <__TEXT_REGION_LENGTH__+0x7e00c0>
+ 11a:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7e00c4>
+ 11e:	88 e9       	ldi	r24, 0x98	; 152
+ 120:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7e00c1>
+ 124:	86 e0       	ldi	r24, 0x06	; 6
+ 126:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__TEXT_REGION_LENGTH__+0x7e00c2>
+ 12a:	78 94       	sei
+ 12c:	08 95       	ret
+
+0000012e <USART_Transmit>:
+ 12e:	e0 ec       	ldi	r30, 0xC0	; 192
+ 130:	f0 e0       	ldi	r31, 0x00	; 0
+ 132:	90 81       	ld	r25, Z
+ 134:	95 ff       	sbrs	r25, 5
+ 136:	fd cf       	rjmp	.-6      	; 0x132 <USART_Transmit+0x4>
+ 138:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
+ 13c:	08 95       	ret
+
+0000013e <command_USART>:
+ 13e:	0f 93       	push	r16
+ 140:	1f 93       	push	r17
+ 142:	cf 93       	push	r28
+ 144:	df 93       	push	r29
+ 146:	ec 01       	movw	r28, r24
+ 148:	8c 01       	movw	r16, r24
+ 14a:	08 5f       	subi	r16, 0xF8	; 248
+ 14c:	1f 4f       	sbci	r17, 0xFF	; 255
+ 14e:	89 91       	ld	r24, Y+
+ 150:	0e 94 97 00 	call	0x12e	; 0x12e <USART_Transmit>
+ 154:	c0 17       	cp	r28, r16
+ 156:	d1 07       	cpc	r29, r17
+ 158:	d1 f7       	brne	.-12     	; 0x14e <command_USART+0x10>
+ 15a:	df 91       	pop	r29
+ 15c:	cf 91       	pop	r28
+ 15e:	1f 91       	pop	r17
+ 160:	0f 91       	pop	r16
+ 162:	08 95       	ret
+
+00000164 <init_GPIO>:
+	_delay_ms(100);
+}
+
+void init_GPIO()
+{
+	DDRB |= 1<<DDRB5;
+ 164:	25 9a       	sbi	0x04, 5	; 4
+	DDRB &= ~(1 << DDRB0);
+ 166:	20 98       	cbi	0x04, 0	; 4
+	DDRD &= ~((1 << DDRD5) & (1 << DDRD6) & (1 << DDRD7));
+ 168:	8a b1       	in	r24, 0x0a	; 10
+ 16a:	8a b9       	out	0x0a, r24	; 10
+ 16c:	08 95       	ret
+
+0000016e <get_Address>:
+}
+
+void get_Address()
+{
+	if((PIND&(1<<PIND5))==0){
+ 16e:	4d 99       	sbic	0x09, 5	; 9
+ 170:	05 c0       	rjmp	.+10     	; 0x17c <get_Address+0xe>
+		Address +=1;
+ 172:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <Address>
+ 176:	8f 5f       	subi	r24, 0xFF	; 255
+ 178:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <Address>
+		}if((PIND&(1<<PIND6))==0){
+ 17c:	4e 99       	sbic	0x09, 6	; 9
+ 17e:	05 c0       	rjmp	.+10     	; 0x18a <get_Address+0x1c>
+		Address +=2;
+ 180:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <Address>
+ 184:	8e 5f       	subi	r24, 0xFE	; 254
+ 186:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <Address>
+		}if((PIND&(1<<PIND7))==0){
+ 18a:	4f 99       	sbic	0x09, 7	; 9
+ 18c:	05 c0       	rjmp	.+10     	; 0x198 <get_Address+0x2a>
+		Address +=4;
+ 18e:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <Address>
+ 192:	8c 5f       	subi	r24, 0xFC	; 252
+ 194:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <Address>
+		}if((PINB&(1<<PINB0))==0){
+ 198:	18 99       	sbic	0x03, 0	; 3
+ 19a:	05 c0       	rjmp	.+10     	; 0x1a6 <get_Address+0x38>
+		Address +=8;
+ 19c:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <Address>
+ 1a0:	88 5f       	subi	r24, 0xF8	; 248
+ 1a2:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <Address>
+ 1a6:	08 95       	ret
+
+000001a8 <main>:
+}
+
+int main(void)
+{
+    /* Replace with your application code */
+	init_GPIO();
+ 1a8:	0e 94 b2 00 	call	0x164	; 0x164 <init_GPIO>
+	DDRB |= (1<<DDB5);
+ 1ac:	25 9a       	sbi	0x04, 5	; 4
+	get_Address();
+ 1ae:	0e 94 b7 00 	call	0x16e	; 0x16e <get_Address>
+	USART_Init(MYUBRR);
+ 1b2:	87 e6       	ldi	r24, 0x67	; 103
+ 1b4:	90 e0       	ldi	r25, 0x00	; 0
+ 1b6:	0e 94 8b 00 	call	0x116	; 0x116 <USART_Init>
+	TWI_Init(Address);
+ 1ba:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <Address>
+ 1be:	0e 94 79 00 	call	0xf2	; 0xf2 <TWI_Init>
+			//click_LED();
+			asm("nop");
+		} else{
+			twi_write_complete = FALSE;
+			command_USART(twiBuf);
+			memset(twiBuf, 0, sizeof(twiBuf));
+ 1c2:	c8 e0       	ldi	r28, 0x08	; 8
+	get_Address();
+	USART_Init(MYUBRR);
+	TWI_Init(Address);
+    while (1) 
+    {
+		if (twi_write_complete == FALSE){
+ 1c4:	80 91 04 01 	lds	r24, 0x0104	; 0x800104 <twi_write_complete>
+ 1c8:	81 11       	cpse	r24, r1
+ 1ca:	02 c0       	rjmp	.+4      	; 0x1d0 <main+0x28>
+			//click_LED();
+			asm("nop");
+ 1cc:	00 00       	nop
+ 1ce:	fa cf       	rjmp	.-12     	; 0x1c4 <main+0x1c>
+		} else{
+			twi_write_complete = FALSE;
+ 1d0:	10 92 04 01 	sts	0x0104, r1	; 0x800104 <twi_write_complete>
+			command_USART(twiBuf);
+ 1d4:	86 e0       	ldi	r24, 0x06	; 6
+ 1d6:	91 e0       	ldi	r25, 0x01	; 1
+ 1d8:	0e 94 9f 00 	call	0x13e	; 0x13e <command_USART>
+			memset(twiBuf, 0, sizeof(twiBuf));
+ 1dc:	e6 e0       	ldi	r30, 0x06	; 6
+ 1de:	f1 e0       	ldi	r31, 0x01	; 1
+ 1e0:	df 01       	movw	r26, r30
+ 1e2:	8c 2f       	mov	r24, r28
+ 1e4:	1d 92       	st	X+, r1
+ 1e6:	8a 95       	dec	r24
+ 1e8:	e9 f7       	brne	.-6      	; 0x1e4 <main+0x3c>
+ 1ea:	ec cf       	rjmp	.-40     	; 0x1c4 <main+0x1c>
+
+000001ec <__vector_18>:
+		}
+    }
+}
+
+ISR(USART0_RX_vect){
+ 1ec:	1f 92       	push	r1
+ 1ee:	0f 92       	push	r0
+ 1f0:	0f b6       	in	r0, 0x3f	; 63
+ 1f2:	0f 92       	push	r0
+ 1f4:	11 24       	eor	r1, r1
+ 1f6:	2f 93       	push	r18
+ 1f8:	8f 93       	push	r24
+ 1fa:	9f 93       	push	r25
+ 1fc:	ef 93       	push	r30
+ 1fe:	ff 93       	push	r31
+	messageBuf[data_count] = UDR0;
+ 200:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <__data_end>
+ 204:	90 91 03 01 	lds	r25, 0x0103	; 0x800103 <__data_end+0x1>
+ 208:	20 91 c6 00 	lds	r18, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7e00c6>
+ 20c:	fc 01       	movw	r30, r24
+ 20e:	e2 5f       	subi	r30, 0xF2	; 242
+ 210:	fe 4f       	sbci	r31, 0xFE	; 254
+ 212:	20 83       	st	Z, r18
+	data_count ++;
+ 214:	01 96       	adiw	r24, 0x01	; 1
+	if (data_count == UART_BUFFER_SIZE){
+ 216:	89 31       	cpi	r24, 0x19	; 25
+ 218:	91 05       	cpc	r25, r1
+ 21a:	29 f0       	breq	.+10     	; 0x226 <__vector_18+0x3a>
+    }
+}
+
+ISR(USART0_RX_vect){
+	messageBuf[data_count] = UDR0;
+	data_count ++;
+ 21c:	90 93 03 01 	sts	0x0103, r25	; 0x800103 <__data_end+0x1>
+ 220:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <__data_end>
+ 224:	04 c0       	rjmp	.+8      	; 0x22e <__vector_18+0x42>
+	if (data_count == UART_BUFFER_SIZE){
+		data_count = 0;
+ 226:	10 92 03 01 	sts	0x0103, r1	; 0x800103 <__data_end+0x1>
+ 22a:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <__data_end>
+	}
+}
+ 22e:	ff 91       	pop	r31
+ 230:	ef 91       	pop	r30
+ 232:	9f 91       	pop	r25
+ 234:	8f 91       	pop	r24
+ 236:	2f 91       	pop	r18
+ 238:	0f 90       	pop	r0
+ 23a:	0f be       	out	0x3f, r0	; 63
+ 23c:	0f 90       	pop	r0
+ 23e:	1f 90       	pop	r1
+ 240:	18 95       	reti
+
+00000242 <__vector_24>:
+
+ISR(TWI0_vect)
+{
+ 242:	1f 92       	push	r1
+ 244:	0f 92       	push	r0
+ 246:	0f b6       	in	r0, 0x3f	; 63
+ 248:	0f 92       	push	r0
+ 24a:	11 24       	eor	r1, r1
+ 24c:	8f 93       	push	r24
+ 24e:	9f 93       	push	r25
+ 250:	ef 93       	push	r30
+ 252:	ff 93       	push	r31
+	switch (TWSR0)
+ 254:	80 91 b9 00 	lds	r24, 0x00B9	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7e00b9>
+ 258:	80 39       	cpi	r24, 0x90	; 144
+ 25a:	09 f4       	brne	.+2      	; 0x25e <__vector_24+0x1c>
+ 25c:	5f c0       	rjmp	.+190    	; 0x31c <__vector_24+0xda>
+ 25e:	90 f4       	brcc	.+36     	; 0x284 <__vector_24+0x42>
+ 260:	80 37       	cpi	r24, 0x70	; 112
+ 262:	09 f4       	brne	.+2      	; 0x266 <__vector_24+0x24>
+ 264:	55 c0       	rjmp	.+170    	; 0x310 <__vector_24+0xce>
+ 266:	38 f4       	brcc	.+14     	; 0x276 <__vector_24+0x34>
+ 268:	88 23       	and	r24, r24
+ 26a:	09 f4       	brne	.+2      	; 0x26e <__vector_24+0x2c>
+ 26c:	75 c0       	rjmp	.+234    	; 0x358 <__vector_24+0x116>
+ 26e:	80 36       	cpi	r24, 0x60	; 96
+ 270:	09 f4       	brne	.+2      	; 0x274 <__vector_24+0x32>
+ 272:	4e c0       	rjmp	.+156    	; 0x310 <__vector_24+0xce>
+ 274:	75 c0       	rjmp	.+234    	; 0x360 <__vector_24+0x11e>
+ 276:	80 38       	cpi	r24, 0x80	; 128
+ 278:	09 f4       	brne	.+2      	; 0x27c <__vector_24+0x3a>
+ 27a:	50 c0       	rjmp	.+160    	; 0x31c <__vector_24+0xda>
+ 27c:	88 38       	cpi	r24, 0x88	; 136
+ 27e:	09 f4       	brne	.+2      	; 0x282 <__vector_24+0x40>
+ 280:	6b c0       	rjmp	.+214    	; 0x358 <__vector_24+0x116>
+ 282:	6e c0       	rjmp	.+220    	; 0x360 <__vector_24+0x11e>
+ 284:	88 3a       	cpi	r24, 0xA8	; 168
+ 286:	81 f0       	breq	.+32     	; 0x2a8 <__vector_24+0x66>
+ 288:	38 f4       	brcc	.+14     	; 0x298 <__vector_24+0x56>
+ 28a:	88 39       	cpi	r24, 0x98	; 152
+ 28c:	09 f4       	brne	.+2      	; 0x290 <__vector_24+0x4e>
+ 28e:	64 c0       	rjmp	.+200    	; 0x358 <__vector_24+0x116>
+ 290:	80 3a       	cpi	r24, 0xA0	; 160
+ 292:	09 f4       	brne	.+2      	; 0x296 <__vector_24+0x54>
+ 294:	58 c0       	rjmp	.+176    	; 0x346 <__vector_24+0x104>
+ 296:	64 c0       	rjmp	.+200    	; 0x360 <__vector_24+0x11e>
+ 298:	80 3c       	cpi	r24, 0xC0	; 192
+ 29a:	b1 f1       	breq	.+108    	; 0x308 <__vector_24+0xc6>
+ 29c:	88 3c       	cpi	r24, 0xC8	; 200
+ 29e:	09 f4       	brne	.+2      	; 0x2a2 <__vector_24+0x60>
+ 2a0:	5b c0       	rjmp	.+182    	; 0x358 <__vector_24+0x116>
+ 2a2:	88 3b       	cpi	r24, 0xB8	; 184
+ 2a4:	a9 f0       	breq	.+42     	; 0x2d0 <__vector_24+0x8e>
+ 2a6:	5c c0       	rjmp	.+184    	; 0x360 <__vector_24+0x11e>
+	{
+		case TW_ST_SLA_ACK:            // Own SLA+R has been received; ACK has been returned
+             			twi_reg_addr = 0;
+ 2a8:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <twi_reg_addr>
+             			TWDR0 = messageBuf[twi_reg_addr];
+ 2ac:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <messageBuf>
+ 2b0:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+             			messageBuf[twi_reg_addr]=0;
+ 2b4:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <twi_reg_addr>
+ 2b8:	e8 2f       	mov	r30, r24
+ 2ba:	f0 e0       	ldi	r31, 0x00	; 0
+ 2bc:	e2 5f       	subi	r30, 0xF2	; 242
+ 2be:	fe 4f       	sbci	r31, 0xFE	; 254
+ 2c0:	10 82       	st	Z, r1
+             			twi_reg_addr++;
+ 2c2:	8f 5f       	subi	r24, 0xFF	; 255
+ 2c4:	80 93 05 01 	sts	0x0105, r24	; 0x800105 <twi_reg_addr>
+             			TWCR0 = (1<<TWIE) | (1<<TWINT) | (1<<TWEA) | (1<<TWEN);
+ 2c8:	85 ec       	ldi	r24, 0xC5	; 197
+ 2ca:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+             			break;
+ 2ce:	4b c0       	rjmp	.+150    	; 0x366 <__vector_24+0x124>
+		case TW_ST_DATA_ACK:           // Data byte in TWDR0 has been transmitted; ACK has been received
+		     			TWDR0 = messageBuf[twi_reg_addr];
+ 2d0:	e0 91 05 01 	lds	r30, 0x0105	; 0x800105 <twi_reg_addr>
+ 2d4:	f0 e0       	ldi	r31, 0x00	; 0
+ 2d6:	e2 5f       	subi	r30, 0xF2	; 242
+ 2d8:	fe 4f       	sbci	r31, 0xFE	; 254
+ 2da:	80 81       	ld	r24, Z
+ 2dc:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+		     			messageBuf[twi_reg_addr]=0;
+ 2e0:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <twi_reg_addr>
+ 2e4:	e8 2f       	mov	r30, r24
+ 2e6:	f0 e0       	ldi	r31, 0x00	; 0
+ 2e8:	e2 5f       	subi	r30, 0xF2	; 242
+ 2ea:	fe 4f       	sbci	r31, 0xFE	; 254
+ 2ec:	10 82       	st	Z, r1
+		     			twi_reg_addr++;
+ 2ee:	8f 5f       	subi	r24, 0xFF	; 255
+ 2f0:	80 93 05 01 	sts	0x0105, r24	; 0x800105 <twi_reg_addr>
+		     			if (twi_reg_addr < UART_BUFFER_SIZE) {
+ 2f4:	89 31       	cpi	r24, 0x19	; 25
+ 2f6:	20 f4       	brcc	.+8      	; 0x300 <__vector_24+0xbe>
+			     					TWCR0 = (1<<TWEN)|                                 // TWI Interface enabled
+ 2f8:	85 ec       	ldi	r24, 0xC5	; 197
+ 2fa:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 2fe:	33 c0       	rjmp	.+102    	; 0x366 <__vector_24+0x124>
+			     					(1<<TWIE)|(1<<TWINT)|                      // Enable TWI Interrupt and clear the flag to send byte
+			     					(1<<TWEA)|(0<<TWSTA)|(0<<TWSTO)|           //
+			     					(0<<TWWC);
+			     			} else {
+			     					TWCR0 = (1<<TWEN)|                                 // TWI Interface enabled
+ 300:	85 e8       	ldi	r24, 0x85	; 133
+ 302:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+ 306:	2f c0       	rjmp	.+94     	; 0x366 <__vector_24+0x124>
+			     					(0<<TWEA)|(0<<TWSTA)|(0<<TWSTO)|           //
+			     					(0<<TWWC);
+		     			}
+		     			break;
+		case TW_ST_DATA_NACK:          // Data byte in TWDR0 has been transmitted; NACK has been received.
+		          TWCR0 = (1<<TWEN)|                                 // Enable TWI-interface and release TWI pins
+ 308:	85 ec       	ldi	r24, 0xC5	; 197
+ 30a:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+		          (1<<TWIE)|(1<<TWINT)|                      // Keep interrupt enabled and clear the flag
+		          (1<<TWEA)|(0<<TWSTA)|(0<<TWSTO)|           // Answer on next address match
+		          (0<<TWWC);                                 //
+		          break;
+ 30e:	2b c0       	rjmp	.+86     	; 0x366 <__vector_24+0x124>
+		case TW_SR_GCALL_ACK:            // General call address has been received; ACK has been returned
+		case TW_SR_SLA_ACK:            // Own SLA+W has been received ACK has been returned
+		          twi_reg_addr = 0;                             // Set buffer pointer to first data location
+ 310:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <twi_reg_addr>
+		          TWCR0 = (1<<TWEN)|                                 // TWI Interface enabled
+ 314:	85 ec       	ldi	r24, 0xC5	; 197
+ 316:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+		          (1<<TWIE)|(1<<TWINT)|                      // Enable TWI Interrupt and clear the flag to send byte
+		          (1<<TWEA)|(0<<TWSTA)|(0<<TWSTO)|           // Expect ACK on this transmission
+		          (0<<TWWC);		
+		          break;
+ 31a:	25 c0       	rjmp	.+74     	; 0x366 <__vector_24+0x124>
+		case TW_SR_DATA_ACK:       // Previously addressed with own SLA+W; data has been received; ACK has been returned
+		case TW_SR_GCALL_DATA_ACK:       // Previously addressed with general call; data has been received; ACK has been returned
+                  if (twi_reg_addr >= TWI_BUFFER_SIZE) {
+ 31c:	80 91 05 01 	lds	r24, 0x0105	; 0x800105 <twi_reg_addr>
+ 320:	88 30       	cpi	r24, 0x08	; 8
+ 322:	18 f0       	brcs	.+6      	; 0x32a <__vector_24+0xe8>
+				         twi_reg_addr = 0x00;   
+ 324:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <twi_reg_addr>
+ 328:	0a c0       	rjmp	.+20     	; 0x33e <__vector_24+0xfc>
+				  }else{
+					     twiBuf[twi_reg_addr] = TWDR0;
+ 32a:	90 91 bb 00 	lds	r25, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7e00bb>
+ 32e:	e8 2f       	mov	r30, r24
+ 330:	f0 e0       	ldi	r31, 0x00	; 0
+ 332:	ea 5f       	subi	r30, 0xFA	; 250
+ 334:	fe 4f       	sbci	r31, 0xFE	; 254
+ 336:	90 83       	st	Z, r25
+					     twi_reg_addr++;
+ 338:	8f 5f       	subi	r24, 0xFF	; 255
+ 33a:	80 93 05 01 	sts	0x0105, r24	; 0x800105 <twi_reg_addr>
+				  }
+		          TWCR0 = (1<<TWEN)|                                 // TWI Interface enabled
+ 33e:	85 ec       	ldi	r24, 0xC5	; 197
+ 340:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+		          (1<<TWIE)|(1<<TWINT)|                      // Enable TWI Interrupt and clear the flag to send byte
+		          (1<<TWEA)|(0<<TWSTA)|(0<<TWSTO)|           // Send ACK after next reception
+		          (0<<TWWC);                                 //
+		          break;
+ 344:	10 c0       	rjmp	.+32     	; 0x366 <__vector_24+0x124>
+		case TW_SR_STOP:       // A STOP condition or repeated START condition has been received while still addressed as Slave
+		          TWCR0 = (1<<TWEN)|                                 // Enable TWI-interface and release TWI pins
+ 346:	85 ec       	ldi	r24, 0xC5	; 197
+ 348:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+		          (1<<TWIE)|(1<<TWINT)|                      // Enable interrupt and clear the flag
+		          (1<<TWEA)|(0<<TWSTA)|(0<<TWSTO)|           // Wait for new address match
+		          (0<<TWWC);
+				  twi_reg_addr = 0;
+ 34c:	10 92 05 01 	sts	0x0105, r1	; 0x800105 <twi_reg_addr>
+				  twi_write_complete = TRUE;                                 //
+ 350:	81 e0       	ldi	r24, 0x01	; 1
+ 352:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <twi_write_complete>
+           		  break;
+ 356:	07 c0       	rjmp	.+14     	; 0x366 <__vector_24+0x124>
+		case TW_SR_DATA_NACK:      // Previously addressed with own SLA+W; data has been received; NOT ACK has been returned
+		case TW_SR_GCALL_DATA_NACK:      // Previously addressed with general call; data has been received; NOT ACK has been returned
+		case TW_ST_LAST_DATA: // Last data byte in TWDR0 has been transmitted (TWEA = “0”); ACK has been received
+		case TW_BUS_ERROR:         // Bus error due to an illegal START or STOP condition
+		          TWCR0 =   (1<<TWSTO)|(1<<TWINT);   //Recover from TWI_BUS_ERROR, this will release the SDA and SCL pins thus enabling other devices to use the bus
+ 358:	80 e9       	ldi	r24, 0x90	; 144
+ 35a:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+		          break;
+ 35e:	03 c0       	rjmp	.+6      	; 0x366 <__vector_24+0x124>
+		default:
+		          TWCR0 = (1<<TWEN)|                                 // Enable TWI-interface and release TWI pins
+ 360:	85 ec       	ldi	r24, 0xC5	; 197
+ 362:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7e00bc>
+		          (1<<TWIE)|(1<<TWINT)|                      // Keep interrupt enabled and clear the flag
+		          (1<<TWEA)|(0<<TWSTA)|(0<<TWSTO)|           // Acknowledge on any new requests.
+		          (0<<TWWC);                                 //
+	}
+}
+ 366:	ff 91       	pop	r31
+ 368:	ef 91       	pop	r30
+ 36a:	9f 91       	pop	r25
+ 36c:	8f 91       	pop	r24
+ 36e:	0f 90       	pop	r0
+ 370:	0f be       	out	0x3f, r0	; 63
+ 372:	0f 90       	pop	r0
+ 374:	1f 90       	pop	r1
+ 376:	18 95       	reti
+
+00000378 <_exit>:
+ 378:	f8 94       	cli
+
+0000037a <__stop_program>:
+ 37a:	ff cf       	rjmp	.-2      	; 0x37a <__stop_program>
